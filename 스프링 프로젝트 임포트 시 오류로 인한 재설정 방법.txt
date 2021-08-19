@@ -1,0 +1,3 @@
+Dynamic Web Project 생성(이름은 JSpring22a로 설정해주었다,) (마지막에 generate~ 체크 필수)
+JSrping 22에 있는 것들 중에 다음 캡쳐에 있는 대로 복사해주기
+jdbc.properties 설정 변경해주기 (username, password, 3라인에 orcl을 xe로 바꿔줄 것.
