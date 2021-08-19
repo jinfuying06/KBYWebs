@@ -1,0 +1,16 @@
+ORA-01017 오류 해결방법1 (계정 패스워드 변경하기)
+1. SQL Command Line 접속
+2. connect /as sysdba 입력 (Connected)
+3. alter user (username) identified by (new password); -> 계정 패스워드 변경하는거
+4. grant connect, resource to (username); -> 권한 부여까지 해주기
+
+ORA-01017 오류 해결방법2 (영어 대소무자 구분하는 거 끄기)
+1. SQL Command Line 접속
+2. connect /as sysdba 입력 (Connected)
+3. alter system set sec_case_sensitice_logon=false; 입력 -> 영어 대소문자 구분 끄기
+4. show parameter sec_case; 입력해서 현재 설정값 확인
+
+ORA-01017 오류 해결방법3 (락 해제하기)
+1. SELECT * FROM (userdba) WHERE username = (username); 입력해서 조회해보기
+	-> account status 에서 Expire~ 이 있으면 락 해제가 필요한 것
+2. ALTER USER (username) ACCOUNT UNLOCK; -> 락 해제시켜주기
